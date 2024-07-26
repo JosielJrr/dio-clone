@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Clone da Plataforma DIO
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é um clone da plataforma de ensino DIO, desenvolvido em React. A aplicação simula a navegação e funcionalidades básicas da plataforma original.
 
-## Available Scripts
+## Funcionalidades
 
-In the project directory, you can run:
+- **Página Inicial (Home)**: Apresenta uma introdução ao serviço, destacando os principais benefícios e oferecendo um botão para iniciar o processo de login.
+- **Login**: Permite que os usuários façam login na plataforma com validação de e-mail e senha. Se autenticado, o usuário é redirecionado para a página de feed.
+- **Feed**: Mostra uma lista de conteúdos e um ranking de usuários, permitindo visualizar as postagens mais recentes e os melhores classificados.
+- **Registro (Register)**: Facilita o registro de novos usuários, oferecendo um formulário para criação de conta e uma mensagem legal sobre os termos de uso e políticas de privacidade.
 
-### `npm start`
+## Tecnologias Usadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- JavaScript
+- HTML
+- CSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Instalação
 
-### `npm test`
+Para executar este projeto localmente, siga os seguintes passos:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone o repositório:
+    ```bash
+    git clone https://github.com/JosielJrr/dio-clone.git
+    ```
+2. Navegue para o diretório do projeto:
+    ```bash
+    cd dio-clone
+    ```
+3. Instale as dependências do projeto:
+    ```bash
+    npm install
+    ```
+4. Inicie o servidor de desenvolvimento:
+    ```bash
+    npm start
+    ```
+5. Inicialize o servidor de dados JSON (utilizando `json-server` para simular uma API):
+    ```bash
+    npm run api
+    ```
 
-### `npm run build`
+## Scripts Disponíveis
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+No diretório do projeto, você pode executar:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `npm start`: Inicia a aplicação em modo de desenvolvimento.
+- `npm test`: Executa os testes em modo interativo.
+- `npm run build`: Cria uma versão otimizada para produção da aplicação.
+- `npm run eject`: Remove as dependências de configuração e permite personalizar o setup (opcional).
+- `npm run api`: Inicializa o `json-server` para fornecer uma API local para a aplicação.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Nota Adicional
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Este projeto foi desenvolvido como parte da Formação React Developer da Digital Innovation One.
