@@ -10,12 +10,24 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (min-width: 1440px) {
+        max-width: 1200px;
+        margin-top: 140px;
+        gap: 40px;
+    }
 `;
 
 export const TextContainer = styled.div`
     width: 388px;
-    height: 425px;
-    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    @media (min-width: 1440px) {
+        width: 460px;
+        height: auto;
+    }
 `;
 
 export const Text = styled.p`
@@ -23,12 +35,20 @@ export const Text = styled.p`
     font-weight: 700;
     line-height: 43.58px;
     text-align: left;
-    position: absolute;
-    top: 0;
+    max-width: 100%;
+
+    @media (min-width: 1440px) {
+        font-size: 36px;
+        line-height: 50px;
+    }
 `;
 
 export const Wrapper = styled.div`
     width: 374px;
+
+    @media (min-width: 1440px) {
+        width: 480px;
+    }
 `;
 
 export const TitleLogin = styled.h1`
@@ -37,6 +57,12 @@ export const TitleLogin = styled.h1`
     line-height: 43.58px;
     text-align: left;
     margin-bottom: 5px;
+
+    @media (min-width: 1440px) {
+        font-size: 36px;
+        line-height: 50px;
+        margin-bottom: 8px;
+    }
 `;
 
 export const SubtitleLogin = styled.p`
@@ -45,6 +71,12 @@ export const SubtitleLogin = styled.p`
     line-height: 24.51px;
     text-align: left;
     margin-bottom: 15px;
+
+    @media (min-width: 1440px) {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 20px;
+    }
 `;
 
 export const TextLogin = styled.p`
@@ -54,6 +86,13 @@ export const TextLogin = styled.p`
     line-height: 24.51px;
     text-align: left;
     margin: 20px 0;
+
+    @media (min-width: 1440px) {
+        width: 450px;
+        font-size: 16px;
+        line-height: 28px;
+        margin: 24px 0;
+    }
 `;
 
 export const Login = styled.p`
@@ -62,6 +101,11 @@ export const Login = styled.p`
     line-height: 19.07px;
     text-align: left;
     margin-bottom: 20px;
+
+    @media (min-width: 1440px) {
+        font-size: 16px;
+        line-height: 21px;
+    }
 `;
 
 export const StyledLink = styled(Link)`
@@ -75,5 +119,10 @@ export const StyledLink = styled(Link)`
 
     &:hover {
         opacity: 0.5;
+    }
+
+    @media (min-width: 1440px) {
+        font-size: 16px;
+        line-height: 21px;
     }
 `;

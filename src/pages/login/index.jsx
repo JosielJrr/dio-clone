@@ -11,7 +11,7 @@ import { Input } from '../../components/Input/Input';
 import {
     Container,
     StyledLink,
-    EsqueciText,
+    ForgotPasswordText,
     Row,
     SubtitleLogin,
     TextContainer,
@@ -86,7 +86,7 @@ const Login = () => {
 
                         {/* Links para recuperação de senha e cadastro */}
                         <Row>
-                            <EsqueciText>Esqueci minha senha</EsqueciText>
+                            <ForgotPasswordText>Esqueci minha senha</ForgotPasswordText>
                             <StyledLink to='/register'>Criar Conta</StyledLink>
                         </Row>
                     </Wrapper>

@@ -8,8 +8,8 @@ import {
     BuscarInputContainer,
     Container,
     Input,
-    Menu,
-    MenuRight,
+    LinkMenu,
+    LinkRight,
     Row,
     UserPicture,
     Wrapper
@@ -39,8 +39,8 @@ const Header = ({ autenticado }) => {
                             <BuscarInputContainer>
                                 <Input placeholder='Buscar...' />
                             </BuscarInputContainer>
-                            <Menu>Live Code</Menu>
-                            <Menu>Global</Menu>
+                            <LinkMenu>Live Code</LinkMenu>
+                            <LinkMenu>Global</LinkMenu>
                         </>
                     ) : null}
                 </Row>
@@ -51,7 +51,7 @@ const Header = ({ autenticado }) => {
                     ) : (
                         <>
                             {/* Links e botões para usuários não autenticados */}
-                            <MenuRight href='/'>Home</MenuRight>
+                            <LinkRight to='/'>Home</LinkRight>
                             <Row>
                                 <Button title='Entrar' onClick={handleClickSignIn} />
                                 <Button title='Cadastrar' onClick={handleClickRegister} />

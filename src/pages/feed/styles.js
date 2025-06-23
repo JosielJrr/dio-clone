@@ -9,6 +9,12 @@ export const Container = styled.main`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    @media (min-width: 1440px) {
+        max-width: 1200px;
+        margin-top: 140px;
+        gap: 40px;
+    }
 `
 
 export const Title = styled.h3`
@@ -17,6 +23,12 @@ export const Title = styled.h3`
     line-height: 25px;
     color: #FFFFFF;
     margin-bottom: 24px;
+
+    @media (min-width: 1440px) {
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 32px;
+    }
 `
 
 export const TitleHighlight = styled.h3`
@@ -25,10 +37,19 @@ export const TitleHighlight = styled.h3`
     line-height: 25px;
     color: #FFFFFF70;
     margin-bottom: 24px;
+
+    @media (min-width: 1440px) {
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 32px;
+    }
 `
 
-// Define o tamanho flexível da coluna com base na prop `flex`
 export const Column = styled.div`
-    flex: ${props => props.$flex}; /* Controla o tamanho da coluna dentro do container flexível, definindo quanto ela cresce ou encolhe */
+    flex: ${props => props.$flex};
     padding-right: 24px;
+
+    @media (min-width: 1440px) {
+        padding-right: 32px;
+    }
 `

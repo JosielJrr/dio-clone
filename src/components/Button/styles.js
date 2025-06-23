@@ -6,11 +6,13 @@ export const ButtonContainer = styled.button`
 
     border: none;
     border-radius: 22px; 
-    padding: 2px 12px;
+    padding: 10px 12px;
     position: relative;
 
     background-color: #565656; /* Cor padrão do botão */
     color: #FFF;
+
+    font-size: 14px;
 
     &:hover {
         opacity: 0.6;  
@@ -36,4 +38,14 @@ export const ButtonContainer = styled.button`
             border-radius: 22px;
         }
     `}
-`
+
+    /* Estilos adicionais para telas grandes */
+    @media (min-width: 1440px) {
+        padding: 14px 20px;
+        font-size: 16px;
+
+        ${props => props.$variant !== 'primary' && css`
+            height: 40px;
+        `}
+    }
+`;
