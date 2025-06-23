@@ -1,20 +1,22 @@
-import { useNavigate } from 'react-router-dom';
+import { MdEmail, MdLock } from 'react-icons/md';
 import { useForm } from 'react-hook-form';
-import { MdEmail, MdLock } from 'react-icons/md'
-import { Button } from '../../components/Button';
-import { Header } from '../../components/Header';
-import { Input } from '../../components/Input';
+import { useNavigate } from 'react-router-dom';
+
 import { api } from '../../services/api';
+
+import { Button } from '../../components/Button/Button';
+import { Header } from '../../components/Header/Header';
+import { Input } from '../../components/Input/Input';
 
 import {
     Container,
-    Title,
-    TextContainer,
-    TitleLogin,
-    SubtitleLogin,
-    EsqueciText,
     CriarText,
+    EsqueciText,
     Row,
+    SubtitleLogin,
+    TextContainer,
+    Title,
+    TitleLogin,
     Wrapper
 } from './styles';
 

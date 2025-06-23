@@ -1,12 +1,13 @@
 import { FiThumbsUp } from 'react-icons/fi';
+
 import {
     CardContainer,
-    ImageBackground,
     Content,
-    UserInfo,
-    UserPicture,
-    PostInfo,
     HasInfo,
+    ImageBackground,
+    PostInfo,
+    UserInfo,
+    UserPicture
 } from './styles';
 
 const Card = () => {

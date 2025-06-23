@@ -1,8 +1,19 @@
-import logo from '../../assets/logo-dio.png';
 import { useNavigate } from 'react-router-dom';
-import { Button } from '../Button';
 
-import { Container, Wrapper, BuscarInputContainer, Input, Row, Menu, MenuRight, UserPicture } from './styles';
+import logo from '../../assets/logo-dio.png';
+
+import { Button } from '../Button/Button';
+
+import {
+    BuscarInputContainer,
+    Container,
+    Input,
+    Menu,
+    MenuRight,
+    Row,
+    UserPicture,
+    Wrapper
+} from './styles';
 
 const Header = ({ autenticado }) => {
 

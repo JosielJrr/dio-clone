@@ -1,17 +1,19 @@
+import { MdEmail, MdLock, MdPerson } from 'react-icons/md';
 import { useForm } from 'react-hook-form';
-import { MdPerson, MdEmail, MdLock } from 'react-icons/md'
-import { Header } from '../../components/Header';
-import { Button } from '../../components/Button';
-import { Input } from '../../components/Input';
+
+import { Button } from '../../components/Button/Button';
+import { Header } from '../../components/Header/Header';
+import { Input } from '../../components/Input/Input';
+
 import {
     Container,
-    TextContainer,
-    Text,
-    Wrapper,
-    TitleLogin,
+    Login,
     SubtitleLogin,
+    Text,
+    TextContainer,
     TextLogin,
-    Login
+    TitleLogin,
+    Wrapper
 } from './styles';
 
 const Register = () => {
