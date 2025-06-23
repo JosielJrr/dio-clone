@@ -1,56 +1,47 @@
 # Clone da Plataforma DIO
 
-Este projeto é um clone da plataforma de ensino DIO, desenvolvido em React. A aplicação simula a navegação e funcionalidades básicas da plataforma original.
+Este projeto é um clone da plataforma de ensino [DIO](https://www.dio.me/), desenvolvido com React. A aplicação simula a navegação e funcionalidades básicas da plataforma original.
 
 ## Funcionalidades
 
-- **Página Inicial (Home)**: Apresenta uma introdução ao serviço, destacando os principais benefícios e oferecendo um botão para iniciar o processo de login.
-- **Login**: Permite que os usuários façam login na plataforma com validação de e-mail e senha. Se autenticado, o usuário é redirecionado para a página de feed.
-- **Feed**: Mostra uma lista de conteúdos e um ranking de usuários, permitindo visualizar as postagens mais recentes e os melhores classificados.
-- **Registro (Register)**: Facilita o registro de novos usuários, oferecendo um formulário para criação de conta e uma mensagem legal sobre os termos de uso e políticas de privacidade.
+- **Página Inicial**: Introdução ao serviço, destacando os principais benefícios e botão para iniciar login.
+- **Login**: Validação de e-mail e senha; redirecionamento para feed após autenticação.
+- **Feed**: Lista de conteúdos e ranking de usuários, com postagens recentes e melhores classificados.
+- **Registro**: Formulário para criação de conta com validação e mensagem sobre termos e políticas de privacidade.
 
 ## Tecnologias Usadas
 
-- React
-- JavaScript
-- HTML
-- CSS
+- `React`: Biblioteca para construir interfaces baseadas em componentes.
+- `react-router-dom`: Navegação e rotas para apps React web.
+- `react-hook-form`: Controle e validação de formulários.
+- `styled-components`: CSS dentro do JS com componentes estilizados.
+- `axios`: Cliente HTTP para requisições assíncronas.
+- `json-server`: Servidor fake para simular API REST local.
 
 ## Instalação
 
-Para executar este projeto localmente, siga os seguintes passos:
-
 1. Clone o repositório:
-    ```bash
-    git clone https://github.com/JosielJrr/dio-clone.git
-    ```
-2. Navegue para o diretório do projeto:
-    ```bash
-    cd dio-clone
-    ```
-3. Instale as dependências do projeto:
-    ```bash
-    npm install
-    ```
-4. Inicie o servidor de desenvolvimento:
-    ```bash
-    npm start
-    ```
-5. Inicialize o servidor de dados JSON (utilizando `json-server` para simular uma API):
-    ```bash
-    npm run api
-    ```
+   ```bash
+   git clone https://github.com/JosielJrr/dio-clone.git
+   cd dio-clone
+   ```
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+3. Inicie o servidor de desenvolvimento React:
+   ```bash
+   npm start
+   ```
+4. Inicie o servidor de dados JSON:
+   ```bash
+   npm run api
+   ```
 
-## Scripts Disponíveis
+## Observações
 
-No diretório do projeto, você pode executar:
+- Registro e login funcionam com API fake via `json-server`, dados persistidos localmente.
+- Código usa boas práticas React, hooks e componentes funcionais para facilitar manutenção.
+- Projeto focado em aprendizado prático da lib `styled-components`.
 
-- `npm start`: Inicia a aplicação em modo de desenvolvimento.
-- `npm test`: Executa os testes em modo interativo.
-- `npm run build`: Cria uma versão otimizada para produção da aplicação.
-- `npm run eject`: Remove as dependências de configuração e permite personalizar o setup (opcional).
-- `npm run api`: Inicializa o `json-server` para fornecer uma API local para a aplicação.
-
-## Nota Adicional
-
-- Este projeto foi desenvolvido como parte da Formação React Developer da [Digital Innovation One](https://www.dio.me/).
+> Este projeto foi desenvolvido como parte da Formação React Developer da [Digital Innovation One](https://www.dio.me/).
