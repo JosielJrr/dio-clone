@@ -14,22 +14,44 @@ const Feed = () => {
         <>
             {/* Cabeçalho com status de autenticação */}
             <Header $autenticado={true} />
-            
+
             {/* Container principal com layout em colunas flexíveis */}
             <Container>
                 {/* Coluna principal maior (flex 3) com título e lista de cards */}
                 <Column $flex={3}>
                     <Title>Feed</Title>
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
+                    <Card
+                        imagem="https://avatars.githubusercontent.com/u/151585338?v=4"
+                        nome="Josiel Junior"
+                        tempo={8}
+                        titulo="Como a IA Está Redefinindo o Futuro do Desenvolvimento de Software"
+                        subtitulo="IA já impacta como codamos e automatizamos tarefas."
+                        tecnologias={['React', 'Python']}
+                    />
+                    <Card
+                        imagem="https://avatars.githubusercontent.com/u/151585338?v=4"
+                        nome="Josiel Junior"
+                        tempo={1}
+                        titulo="Melhores práticas com React 18"
+                        subtitulo="Como otimizar performance usando hooks"
+                        tecnologias={['React', 'JavaScript', 'CSS']}
+                    />
+                    <Card
+                        imagem="https://avatars.githubusercontent.com/u/151585338?v=4"
+                        nome="Josiel Junior"
+                        tempo={4}
+                        titulo="CSS Grid: Layouts flexíveis e modernos"
+                        subtitulo="Domine o Grid para construir interfaces responsivas"
+                        tecnologias={['CSS Grid', 'Sass', 'HTML']}
+                    />
+                    <Card
+                        imagem="https://avatars.githubusercontent.com/u/151585338?v=4"
+                        nome="Josiel Junior"
+                        tempo={5}
+                        titulo="Introdução ao TypeScript no front-end"
+                        subtitulo="Como o TS melhora seu código React"
+                        tecnologias={['TypeScript', 'React', 'Webpack']}
+                    />
                 </Column>
 
                 {/* Coluna lateral menor (flex 1) com ranking */}
