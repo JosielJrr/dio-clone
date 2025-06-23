@@ -18,7 +18,7 @@ export const ButtonContainer = styled.button`
     }
 
     /* Se a variante não for 'primary', aplica estilos alternativos */
-    ${({ variant }) => variant !== 'primary' && css`
+    ${props => props.$variant !== 'primary' && css`
         min-width: 167px;
         height: 33px;
 

@@ -29,6 +29,6 @@ export const TitleHighlight = styled.h3`
 
 // Define o tamanho flexível da coluna com base na prop `flex`
 export const Column = styled.div`
-    flex: ${({ flex }) => flex}; /* Controla o tamanho da coluna dentro do container flexível, definindo quanto ela cresce ou encolhe */
+    flex: ${props => props.$flex}; /* Controla o tamanho da coluna dentro do container flexível, definindo quanto ela cresce ou encolhe */
     padding-right: 24px;
 `

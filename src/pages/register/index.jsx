@@ -1,5 +1,8 @@
 import { MdEmail, MdLock, MdPerson } from 'react-icons/md';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
+
+import { api } from '../../services/api';
 
 import { Button } from '../../components/Button/Button';
 import { Header } from '../../components/Header/Header';
@@ -16,10 +19,29 @@ import {
     Wrapper,
     StyledLink
 } from './styles';
-
 const Register = () => {
-    // Inicializa o react-hook-form para controlar os inputs do formulário
-    const { control } = useForm();
+    const navigate = useNavigate();
+
+    const { control, handleSubmit, formState: { errors } } = useForm({
+        mode: 'onChange',
+        reValidateMode: 'onChange',
+    });
+
+    const onSubmit = async (formData) => {
+        try {
+            await api.post('/users', {
+                name: formData.name,
+                email: formData.email,
+                senha: formData.Password,
+            });
+
+            alert('Cadastro realizado com sucesso!');
+            navigate('/login');
+        } catch (e) {
+            console.error('Erro ao cadastrar usuário', e);
+            alert('Erro ao cadastrar. Tente novamente.');
+        }
+    };
 
     return (
         <>
@@ -38,20 +60,42 @@ const Register = () => {
                         <TitleLogin>Comece agora grátis</TitleLogin>
                         <SubtitleLogin>Crie sua conta e make the change._</SubtitleLogin>
 
-                        {/* Campos de entrada controlados pelo react-hook-form */}
-                        <Input placeholder='Nome Completo' leftIcon={<MdPerson />} name='name' control={control} />
-                        <Input placeholder='E-mail' leftIcon={<MdEmail />} name='email' control={control} />
-                        <Input placeholder='Password' leftIcon={<MdLock />} name='Password' control={control} />
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <Input
+                                placeholder="Nome Completo"
+                                leftIcon={<MdPerson />}
+                                name="name"
+                                control={control}
+                                rules={{ required: true }}
+                            />
+                            {errors.name && <span>Nome é obrigatório</span>}
 
-                        {/* Botão secundário de envio */}
-                        <Button variant='secondary' title='Criar minha conta' />
+                            <Input
+                                placeholder="E-mail"
+                                leftIcon={<MdEmail />}
+                                name="email"
+                                control={control}
+                                rules={{ required: true }}
+                            />
+                            {errors.email && <span>E-mail é obrigatório</span>}
 
-                        {/* Texto informativo sobre termos de uso */}
+                            <Input
+                                placeholder="Password"
+                                leftIcon={<MdLock />}
+                                type="password"
+                                name="Password"
+                                control={control}
+                                rules={{ required: true }}
+                            />
+                            {errors.Password && <span>Senha é obrigatória</span>}
+
+                            <Button $variant='secondary' title='Criar minha conta' type='submit' />
+                        </form>
+
                         <TextLogin>
                             Ao clicar em "criar minha conta grátis", declaro que aceito as Políticas de Privacidade e os Termos de Uso da DIO.
                         </TextLogin>
 
-                        {/* Link para quem já tem conta */}
                         <Login>
                             já tenho conta. <StyledLink to="/login">Fazer login</StyledLink>
                         </Login>
@@ -59,7 +103,8 @@ const Register = () => {
                 </div>
             </Container>
         </>
-    )
-}
+    );
+};
+
 
 export { Register };

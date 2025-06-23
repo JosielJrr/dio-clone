@@ -13,12 +13,12 @@ const Feed = () => {
     return (
         <>
             {/* Cabeçalho com status de autenticação */}
-            <Header autenticado={true} />
+            <Header $autenticado={true} />
             
             {/* Container principal com layout em colunas flexíveis */}
             <Container>
                 {/* Coluna principal maior (flex 3) com título e lista de cards */}
-                <Column flex={3}>
+                <Column $flex={3}>
                     <Title>Feed</Title>
                     <Card />
                     <Card />
@@ -33,7 +33,7 @@ const Feed = () => {
                 </Column>
 
                 {/* Coluna lateral menor (flex 1) com ranking */}
-                <Column flex={1}>
+                <Column $flex={1}>
                     <TitleHighlight> # RANKING 5 TOP DA SEMANA </TitleHighlight>
                     {/* Usuários com progresso percentual para o ranking */}
                     <UserInfo nome='Josiel Junior' image='https://avatars.githubusercontent.com/u/151585338?v=4' percentual={90} />

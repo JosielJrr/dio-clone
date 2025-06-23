@@ -81,7 +81,7 @@ const Login = () => {
                             {errors.senha && <span>Senha é obrigatório</span>}
 
                             {/* Botão secundário para enviar o formulário */}
-                            <Button title='Entrar' variant='secondary' type='submit' />
+                            <Button title='Entrar' $variant='secondary' type='submit' />
                         </form>
 
                         {/* Links para recuperação de senha e cadastro */}

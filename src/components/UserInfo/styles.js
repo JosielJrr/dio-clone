@@ -35,7 +35,7 @@ export const Progress = styled.div`
         position: absolute;
         top: 0;
         left: 0;
-        width: ${({ percentual }) => percentual}%; // Largura dinâmica conforme a porcentagem
+        width: ${props => props.$percentual}%; // Largura dinâmica conforme a porcentagem
         height: 6px;
         border-radius: 3px;
         background-color: #23DD7A;

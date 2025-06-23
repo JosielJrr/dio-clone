@@ -39,7 +39,7 @@ const Home = () => {
                     </TextContent>
 
                     {/* Botão secundário que chama navegação para login */}
-                    <Button title='Começar agora' variant='secondary' onClick={handleClickSignIn} />
+                    <Button title='Começar agora' $variant='secondary' onClick={handleClickSignIn} />
                 </div>
 
                 <div>
