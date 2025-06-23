@@ -10,7 +10,7 @@ import {
     UserPicture
 } from './styles';
 
-const Card = ({ imagem, nome, tempo, titulo, subtitulo, tecnologias }) => {
+const Card = ({ banner, avatar, nome, tempo, titulo, subtitulo, tecnologias, curtidas }) => {
     // Tratar pluralização
     const tempoTexto = tempo === 1 ? 'minuto' : 'minutos';
 
@@ -21,10 +21,10 @@ const Card = ({ imagem, nome, tempo, titulo, subtitulo, tecnologias }) => {
 
     return (
         <CardContainer>
-            <ImageBackground src='https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' />
+            <ImageBackground src={banner} />
             <Content>
                 <UserInfo>
-                    <UserPicture src={imagem} />
+                    <UserPicture src={avatar} />
                     <div>
                         <h4>{nome}</h4>
                         <p>Há {tempo} {tempoTexto}</p>
@@ -37,7 +37,7 @@ const Card = ({ imagem, nome, tempo, titulo, subtitulo, tecnologias }) => {
                 <HasInfo>
                     <h4>{tecnologiasTexto}</h4>
                     <p>
-                        <FiThumbsUp /> 25
+                        <FiThumbsUp /> {curtidas}
                     </p>
                 </HasInfo>
             </Content>
