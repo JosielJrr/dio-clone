@@ -16,17 +16,17 @@ import {
 } from './styles';
 
 const Header = ({ autenticado }) => {
-
     const navigate = useNavigate();
 
+    // Navega para a tela de login
     const handleClickSignIn = () => {
         navigate('/login');
     }
 
+    // Navega para a tela de cadastro
     const handleClickRegister = () => {
         navigate('/register');
     }
-
 
     return (
         <Wrapper>
@@ -35,6 +35,7 @@ const Header = ({ autenticado }) => {
                     <img src={logo} alt='Logo da dio' />
                     {autenticado ? (
                         <>
+                            {/* Input de busca visível só se autenticado */}
                             <BuscarInputContainer>
                                 <Input placeholder='Buscar...' />
                             </BuscarInputContainer>
@@ -45,15 +46,18 @@ const Header = ({ autenticado }) => {
                 </Row>
                 <Row>
                     {autenticado ? (
+                        // Mostra a foto do usuário autenticado
                         <UserPicture src='https://avatars.githubusercontent.com/u/151585338?v=4' />
                     ) : (
                         <>
+                            {/* Links e botões para usuários não autenticados */}
                             <MenuRight href='/'>Home</MenuRight>
                             <Row>
                                 <Button title='Entrar' onClick={handleClickSignIn} />
                                 <Button title='Cadastrar' onClick={handleClickRegister} />
                             </Row>
-                        </>)}
+                        </>
+                    )}
                 </Row>
             </Container>
         </Wrapper>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Container = styled.main`
     width: 100%;
@@ -57,7 +58,7 @@ export const EsqueciText = styled.p`
     color: #E5E044;
 `
 
-export const CriarText = styled.a`
+export const StyledLink = styled(Link)`
     text-decoration: none;
     cursor: pointer;
     font-size: 14px;

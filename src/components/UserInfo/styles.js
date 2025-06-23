@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    display:flex;
+    display: flex;
     flex-direction: row;
     margin-bottom: 24px;
 `
@@ -21,6 +21,7 @@ export const NameText = styled.div`
     color: #FFFFFF;
 `
 
+// Barra de progresso com fundo branco e preenchimento dinâmico
 export const Progress = styled.div`
     width: 180px;
     height: 6px;
@@ -28,14 +29,15 @@ export const Progress = styled.div`
     border-radius: 3px;
     position: relative;
 
+    // Preenchimento da barra com base na prop percentual
     &::after {
         content: '';
         position: absolute;
         top: 0;
         left: 0;
-        width: ${({ percentual }) => percentual}%;
+        width: ${({ percentual }) => percentual}%; // Largura dinâmica conforme a porcentagem
         height: 6px;
         border-radius: 3px;
         background-color: #23DD7A;
     }
-` 
+`

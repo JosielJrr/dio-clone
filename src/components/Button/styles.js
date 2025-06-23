@@ -5,30 +5,26 @@ export const ButtonContainer = styled.button`
     min-width: 120px;
 
     border: none;
-    border-radius: 22px;
+    border-radius: 22px; 
     padding: 2px 12px;
     position: relative;
 
-    background-color: #565656;
+    background-color: #565656; /* Cor padrão do botão */
     color: #FFF;
 
-            &:hover {
-            opacity: 0.6;
-            cursor: pointer;
-        }
+    &:hover {
+        opacity: 0.6;  
+        cursor: pointer;  
+    }
 
-        
+    /* Se a variante não for 'primary', aplica estilos alternativos */
     ${({ variant }) => variant !== 'primary' && css`
         min-width: 167px;
         height: 33px;
 
-        background-color: #E41050;
+        background-color: #E41050; /* Cor da variante secundária */
 
-        &:hover {
-            opacity: 0.6;
-            cursor: pointer;
-        }
-
+        /* Contorno extra ao redor do botão para destacar variante */
         &::after {
             content: '';
             position: absolute; 
