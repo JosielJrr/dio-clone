@@ -30,19 +30,25 @@ Este projeto é um clone da plataforma de ensino [DIO](https://www.dio.me/), des
    ```bash
    npm install
    ```
-3. Inicie o servidor de desenvolvimento React:
+3. Caso não tenha o **JSON Server** instalado globalmente, instale com:
+
+   ```bash
+   npm install -g json-server
+   ```
+4. Inicie o servidor de desenvolvimento React:
+
    ```bash
    npm start
    ```
-4. Inicie o servidor de dados JSON:
+5. Inicie o servidor de dados JSON:
    ```bash
    npm run api
    ```
 
 ## Observações
 
+- Rode os dois servidores juntos, em terminais separados: **React** `npm start` e **JSON Server** `npm run api`, para a aplicação funcionar.
 - Registro e login funcionam com API fake via `json-server`, dados persistidos localmente.
-- Código usa boas práticas React, hooks e componentes funcionais para facilitar manutenção.
 - Projeto focado no aprendizado prático das libs `styled-components` e `react-hook-form`.
 
 > Este projeto foi desenvolvido como parte da Formação React Developer da [Digital Innovation One](https://www.dio.me/).
