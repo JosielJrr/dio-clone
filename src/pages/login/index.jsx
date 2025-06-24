@@ -95,7 +95,6 @@ const Login = () => {
                             <Button title='Entrar' variant='secondary' type='submit' />
                         </form>
 
-                        {/* Links para recuperação de senha e cadastro */}
                         <Row>
                             <ForgotPasswordText>Esqueci minha senha</ForgotPasswordText>
                             <StyledLink to='/register'>Criar Conta</StyledLink>
