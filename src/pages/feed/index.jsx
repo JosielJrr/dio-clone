@@ -13,7 +13,7 @@ const Feed = () => {
     return (
         <>
             {/* Cabeçalho com status de autenticação */}
-            <Header $autenticado={true} />
+            <Header autenticado={true} />
 
             {/* Container principal com layout em colunas flexíveis */}
             <Container>
@@ -23,42 +23,42 @@ const Feed = () => {
                     <Card
                         banner="https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         avatar="https://avatars.githubusercontent.com/u/151585338?v=4"
-                        nome="Josiel Jr."
-                        tempo={8}
-                        titulo="Como a IA Está Redefinindo o Futuro do Desenvolvimento de Software"
-                        subtitulo="IA já impacta como codamos e automatizamos tarefas."
-                        tecnologias={['React', 'Python']}
-                        curtidas={25}
+                        name="Josiel Junior"
+                        time={8}
+                        title="Como a IA está redefinindo o futuro do desenvolvimento de software"
+                        subtitle="IA já impacta como codamos e automatizamos tarefas."
+                        technologies={['React', 'Python']}
+                        likes={25}
                     />
                     <Card
                         banner="https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         avatar="https://avatars.githubusercontent.com/u/151585338?v=4"
-                        nome="Josiel Jr."
-                        tempo={1}
-                        titulo="Melhores práticas com React 18"
-                        subtitulo="Como otimizar performance usando hooks"
-                        tecnologias={['React', 'JavaScript', 'CSS']}
-                        curtidas={44}
+                        name="Josiel Junior"
+                        time={1}
+                        title="Melhores práticas com React 18"
+                        subtitle="Como otimizar performance usando hooks"
+                        technologies={['React', 'JavaScript', 'CSS']}
+                        likes={44}
                     />
                     <Card
                         banner="https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         avatar="https://avatars.githubusercontent.com/u/151585338?v=4"
-                        nome="Josiel Jr."
-                        tempo={4}
-                        titulo="CSS Grid: Layouts flexíveis e modernos"
-                        subtitulo="Domine o Grid para construir interfaces responsivas"
-                        tecnologias={['CSS Grid', 'Sass', 'HTML']}
-                        curtidas={33}
+                        name="Josiel Junior"
+                        time={4}
+                        title="CSS Grid: Layouts flexíveis e modernos"
+                        subtitle="Domine o Grid para construir interfaces responsivas"
+                        technologies={['CSS Grid', 'Sass', 'HTML']}
+                        likes={33}
                     />
                     <Card
                         banner="https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         avatar="https://avatars.githubusercontent.com/u/151585338?v=4"
-                        nome="Josiel Jr."
-                        tempo={5}
-                        titulo="Introdução ao TypeScript no front-end"
-                        subtitulo="Como o TS melhora seu código React"
-                        tecnologias={['TypeScript', 'React', 'Webpack']}
-                        curtidas={55}
+                        name="Josiel Junior"
+                        time={5}
+                        title="Introdução ao TypeScript no front-end"
+                        subtitle="Como o TS melhora seu código React"
+                        technologies={['TypeScript', 'React', 'Webpack']}
+                        likes={55}
                     />
                 </Column>
 

@@ -14,6 +14,7 @@ Este projeto é um clone da plataforma de ensino [DIO](https://www.dio.me/), des
 - `React`: Biblioteca para construir interfaces baseadas em componentes.
 - `react-router-dom`: Navegação e rotas para apps React web.
 - `react-hook-form`: Controle e validação de formulários.
+- `react-icons`: Biblioteca de ícones populares para React.
 - `styled-components`: CSS dentro do JS com componentes estilizados.
 - `axios`: Cliente HTTP para requisições assíncronas.
 - `json-server`: Servidor fake para simular API REST local.
@@ -42,6 +43,6 @@ Este projeto é um clone da plataforma de ensino [DIO](https://www.dio.me/), des
 
 - Registro e login funcionam com API fake via `json-server`, dados persistidos localmente.
 - Código usa boas práticas React, hooks e componentes funcionais para facilitar manutenção.
-- Projeto focado em aprendizado prático da lib `styled-components`.
+- Projeto focado no aprendizado prático das libs `styled-components` e `react-hook-form`.
 
 > Este projeto foi desenvolvido como parte da Formação React Developer da [Digital Innovation One](https://www.dio.me/).

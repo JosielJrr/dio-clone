@@ -111,6 +111,10 @@ export const Input = styled.input`
 
     font-size: 14px;
 
+    &:focus {
+        outline: none;
+    }
+
     @media (min-width: 1440px) {
         font-size: 16px;
     }

@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import bannerImage from '../../assets/banner.png';
 
@@ -13,17 +13,9 @@ import {
 } from './styles';
 
 const Home = () => {
-    const navigate = useNavigate();
-
-    // Redireciona para a página de login ao clicar no botão
-    const handleClickSignIn = () => {
-        navigate('/login')
-    }
-
     return (
         <>
-            <Header /> {/* Cabeçalho fixo sem estado de autenticação explícito */}
-
+            <Header /> 
             <Container>
                 <div>
                     <Title>
@@ -39,7 +31,9 @@ const Home = () => {
                     </TextContent>
 
                     {/* Botão secundário que chama navegação para login */}
-                    <Button title='Começar agora' $variant='secondary' onClick={handleClickSignIn} />
+                    <Link to="/login">
+                        <Button title="Começar agora" variant="secondary" />
+                    </Link>
                 </div>
 
                 <div>

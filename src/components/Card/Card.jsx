@@ -10,14 +10,14 @@ import {
     UserPicture
 } from './styles';
 
-const Card = ({ banner, avatar, nome, tempo, titulo, subtitulo, tecnologias, curtidas }) => {
+const Card = ({ banner, avatar, name, time, title, subtitle, technologies, likes }) => {
     // Tratar pluralização
-    const tempoTexto = tempo === 1 ? 'minuto' : 'minutos';
+    const timeUnit = time === 1 ? 'minuto' : 'minutos';
 
-    // Monta a string de linguagens com #
-    const tecnologiasTexto = Array.isArray(tecnologias)
-        ? tecnologias.map(tech => `#${tech}`).join(' ')
-        : tecnologias;
+    // Monta a string de tecnologias com #
+    const formattedTechnologies = Array.isArray(technologies)
+        ? technologies.map(tech => `#${tech}`).join(' ')
+        : technologies;
 
     return (
         <CardContainer>
@@ -26,18 +26,18 @@ const Card = ({ banner, avatar, nome, tempo, titulo, subtitulo, tecnologias, cur
                 <UserInfo>
                     <UserPicture src={avatar} />
                     <div>
-                        <h4>{nome}</h4>
-                        <p>Há {tempo} {tempoTexto}</p>
+                        <h4>{name}</h4>
+                        <p>Há {time} {timeUnit}</p>
                     </div>
                 </UserInfo>
                 <PostInfo>
-                    <h4>{titulo}</h4>
-                    <p>{subtitulo}</p>
+                    <h4>{title}</h4>
+                    <p>{subtitle}</p>
                 </PostInfo>
                 <HasInfo>
-                    <h4>{tecnologiasTexto}</h4>
+                    <h4>{formattedTechnologies}</h4>
                     <p>
-                        <FiThumbsUp /> {curtidas}
+                        <FiThumbsUp /> {likes}
                     </p>
                 </HasInfo>
             </Content>

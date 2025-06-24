@@ -9,14 +9,14 @@ const Input = ({ leftIcon, name, control, rules, ...rest }) => {
 
             {/* Integração do input com react-hook-form */}
             <Controller
-                name={name}          // Nome do campo no formulário
-                control={control}    // Objeto de controle do formulário
-                rules={rules}
+                name={name}           // Nome do campo no formulário
+                control={control}     // Objeto de controle do formulário do react-hook-form
+                rules={rules}         // Regras de validação para o campo (ex: required, pattern)
                 render={({ field }) => (
                     <InputText
-                        {...field}      // Conecta o input com o estado do react-hook-form (onChange, onBlur, value, name)
-                        {...rest}       // Props extras (ex: placeholder, type, etc)
-                        value={field.value ?? ''}  // Se undefined, passa string vazia
+                        {...field}                // Conecta onChange, onBlur, value, name ao input
+                        {...rest}                 // Props extras (placeholder, type, etc)
+                        value={field.value ?? ''} // Garante string vazia se valor undefined
                     />
                 )}
             />

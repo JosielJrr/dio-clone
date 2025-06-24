@@ -79,6 +79,13 @@ export const SubtitleLogin = styled.p`
     }
 `;
 
+export const SpanError = styled.span`
+    color: #ff4d4f;
+    font-size: 0.875rem; 
+    margin-bottom: 20px;   
+    display: block;
+`;
+
 export const TextLogin = styled.p`
     width: 372px;
     font-size: 15px;

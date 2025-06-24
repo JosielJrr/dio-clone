@@ -88,6 +88,12 @@ export const SubtitleLogin = styled.p`
         margin-bottom: 40px;
     }
 `
+export const SpanError = styled.span`
+    color: #ff4d4f;
+    font-size: 0.875rem; 
+    margin-bottom: 20px;   
+    display: block;
+`;
 
 export const ForgotPasswordText = styled.p`
     font-weight: 700;

@@ -17,7 +17,8 @@ import {
     TextContainer,
     Title,
     TitleLogin,
-    Wrapper
+    Wrapper,
+    SpanError
 } from './styles';
 
 const Login = () => {
@@ -29,11 +30,11 @@ const Login = () => {
         reValidateMode: 'onChange', // Revalida o campo enquanto o usuário digita após um erro
     });
 
-    // Função chamada quando o formulário é enviado com dados válidos
+    // Função chamada ao enviar o formulário com dados válidos
     const onSubmit = async (formData) => {
         try {
             // Busca usuário no backend com email e senha fornecidos
-            const { data } = await api.get(`/users?email=${formData.email}&senha=${formData.senha}`);
+            const { data } = await api.get(`/users?email=${formData.email}&senha=${formData.password}`);
 
             // Se a resposta contém pelo menos um usuário válido, redireciona para o feed
             if (data.length && data[0].id) {
@@ -41,20 +42,17 @@ const Login = () => {
                 return;
             }
 
-            // Se não encontrar, avisa que usuário ou senha estão errados
-            alert('Usuário ou senha inválido');
+            // Se não encontrar, avisa que email ou senha estão errados
+            alert('E-mail ou senha inválido');
         } catch (e) {
             console.error('Erro ao tentar o login', e);
             alert('Houve um erro ao tentar o login. Tente novamente.');
         }
     };
 
-    console.log('errors', errors); // Ajuda a ver erros de validação no console
-
     return (
         <>
-            <Header /> {/* Cabeçalho sem controle de autenticação */}
-
+            <Header /> 
             <Container>
                 <div>
                     <TextContainer>
@@ -73,15 +71,28 @@ const Login = () => {
                         {/* Formulário controlado pelo react-hook-form */}
                         <form onSubmit={handleSubmit(onSubmit)}>
                             {/* Campo para email com ícone */}
-                            <Input placeholder='E-mail' leftIcon={<MdEmail />} name='email' control={control} />
-                            {errors.email && <span>E-mail é obrigatório</span>}
+                            <Input
+                                placeholder="E-mail"
+                                leftIcon={<MdEmail />}
+                                name="email"
+                                control={control}
+                                rules={{ required: 'E-mail é obrigatório' }}
+                            />
+                            {errors.email && <SpanError>{errors.email.message}</SpanError>}
 
                             {/* Campo para senha com ícone */}
-                            <Input type='password' placeholder='Senha' leftIcon={<MdLock />} name='senha' control={control} />
-                            {errors.senha && <span>Senha é obrigatório</span>}
+                            <Input
+                                type="password"
+                                placeholder="Senha"
+                                leftIcon={<MdLock />}
+                                name="password"
+                                control={control}
+                                rules={{ required: 'Senha é obrigatória' }}
+                            />
+                            {errors.password && <SpanError>{errors.password.message}</SpanError>}
 
                             {/* Botão secundário para enviar o formulário */}
-                            <Button title='Entrar' $variant='secondary' type='submit' />
+                            <Button title='Entrar' variant='secondary' type='submit' />
                         </form>
 
                         {/* Links para recuperação de senha e cadastro */}

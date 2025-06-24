@@ -17,22 +17,26 @@ import {
     TextLogin,
     TitleLogin,
     Wrapper,
-    StyledLink
+    StyledLink,
+    SpanError
 } from './styles';
+
 const Register = () => {
     const navigate = useNavigate();
 
+    // Configura o react-hook-form para validar enquanto o usuário digita
     const { control, handleSubmit, formState: { errors } } = useForm({
-        mode: 'onChange',
-        reValidateMode: 'onChange',
+        mode: 'onChange',           // Valida o campo a cada mudança (tecla pressionada)
+        reValidateMode: 'onChange', // Revalida o campo enquanto o usuário digita após um erro
     });
 
+    // Função chamada ao enviar o formulário com dados válidos
     const onSubmit = async (formData) => {
         try {
             await api.post('/users', {
                 name: formData.name,
                 email: formData.email,
-                senha: formData.Password,
+                senha: formData.password,
             });
 
             alert('Cadastro realizado com sucesso!');
@@ -66,30 +70,30 @@ const Register = () => {
                                 leftIcon={<MdPerson />}
                                 name="name"
                                 control={control}
-                                rules={{ required: true }}
+                                rules={{ required: 'Nome é obrigatório' }}
                             />
-                            {errors.name && <span>Nome é obrigatório</span>}
+                            {errors.name && <SpanError>{errors.name.message}</SpanError>}
 
                             <Input
                                 placeholder="E-mail"
                                 leftIcon={<MdEmail />}
                                 name="email"
                                 control={control}
-                                rules={{ required: true }}
+                                rules={{ required: 'E-mail é obrigatório' }}
                             />
-                            {errors.email && <span>E-mail é obrigatório</span>}
+                            {errors.email && <SpanError>{errors.email.message}</SpanError>}
 
                             <Input
-                                placeholder="Password"
+                                placeholder="Senha"
                                 leftIcon={<MdLock />}
                                 type="password"
-                                name="Password"
+                                name="password"
                                 control={control}
-                                rules={{ required: true }}
+                                rules={{ required: 'Senha é obrigatória' }}
                             />
-                            {errors.Password && <span>Senha é obrigatória</span>}
+                            {errors.password && <SpanError>{errors.password.message}</SpanError>}
 
-                            <Button $variant='secondary' title='Criar minha conta' type='submit' />
+                            <Button variant='secondary' title='Criar minha conta' type='submit' />
                         </form>
 
                         <TextLogin>

@@ -9,7 +9,7 @@ export const ButtonContainer = styled.button`
     padding: 10px 12px;
     position: relative;
 
-    background-color: #565656; /* Cor padrão do botão */
+    background-color: #565656;
     color: #FFF;
 
     font-size: 14px;

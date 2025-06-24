@@ -13,7 +13,7 @@ export const InputContainer = styled.div`
 
     @media (min-width: 1440px) {
         height: 36px;
-        margin-bottom: 28px;
+        margin-bottom: 15px;
     }
 `
 
@@ -32,6 +32,10 @@ export const InputText = styled.input`
     color: #FFF;
     border: 0;
     font-size: 14px;
+
+    &:focus {
+    outline: none;
+    }
 
     @media (min-width: 1440px) {
         height: 36px;

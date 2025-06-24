@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import logo from '../../assets/logo-dio.png';
 
@@ -16,31 +16,19 @@ import {
 } from './styles';
 
 const Header = ({ autenticado }) => {
-    const navigate = useNavigate();
-
-    // Navega para a tela de login
-    const handleClickSignIn = () => {
-        navigate('/login');
-    }
-
-    // Navega para a tela de cadastro
-    const handleClickRegister = () => {
-        navigate('/register');
-    }
-
     return (
         <Wrapper>
             <Container>
                 <Row>
-                    <img src={logo} alt='Logo da dio' />
+                    <img src={logo} alt='Logo da DIO' />
                     {autenticado ? (
                         <>
                             {/* Input de busca visível só se autenticado */}
                             <BuscarInputContainer>
                                 <Input placeholder='Buscar...' />
                             </BuscarInputContainer>
-                            <LinkMenu>Live Code</LinkMenu>
-                            <LinkMenu>Global</LinkMenu>
+                            <LinkMenu to='https://www.dio.me/'>Live Code</LinkMenu>
+                            <LinkMenu to='https://www.dio.me/'>Global</LinkMenu>
                         </>
                     ) : null}
                 </Row>
@@ -53,8 +41,12 @@ const Header = ({ autenticado }) => {
                             {/* Links e botões para usuários não autenticados */}
                             <LinkRight to='/'>Home</LinkRight>
                             <Row>
-                                <Button title='Entrar' onClick={handleClickSignIn} />
-                                <Button title='Cadastrar' onClick={handleClickRegister} />
+                                <Link to="/login">
+                                    <Button title="Entrar" />
+                                </Link>
+                                <Link to="/register">
+                                    <Button title="Cadastrar" />
+                                </Link>
                             </Row>
                         </>
                     )}
