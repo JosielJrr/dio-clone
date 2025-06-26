@@ -1,15 +1,15 @@
-# Clone da Plataforma DIO
+# 🎓 Clone da Plataforma DIO
 
 Este projeto é um clone da plataforma de ensino [DIO](https://www.dio.me/), desenvolvido com React. A aplicação simula a navegação e funcionalidades básicas da plataforma original.
 
-## Funcionalidades
+## ⚙️ Funcionalidades
 
 - **Página Inicial**: Introdução ao serviço, destacando os principais benefícios e botão para iniciar login.
 - **Login**: Validação de e-mail e senha; redirecionamento para feed após autenticação.
 - **Feed**: Lista de conteúdos e ranking de usuários, com postagens recentes e melhores classificados.
 - **Registro**: Formulário para criação de conta com validação e mensagem sobre termos e políticas de privacidade.
 
-## Tecnologias Usadas
+## 🛠️ Tecnologias Usadas
 
 - `React`: Biblioteca para construir interfaces baseadas em componentes.
 - `react-router-dom`: Navegação e rotas para apps React web.
@@ -19,7 +19,7 @@ Este projeto é um clone da plataforma de ensino [DIO](https://www.dio.me/), des
 - `axios`: Cliente HTTP para requisições assíncronas.
 - `json-server`: Servidor fake para simular API REST local.
 
-## Instalação
+## 📦 Instalação
 
 1. Clone o repositório:
    ```bash
@@ -45,7 +45,7 @@ Este projeto é um clone da plataforma de ensino [DIO](https://www.dio.me/), des
    npm run api
    ```
 
-## Observações
+## 🔍 Observações
 
 - Rode os dois servidores juntos, em terminais separados: **React** `npm start` e **JSON Server** `npm run api`, para a aplicação funcionar.
 - Registro e login funcionam com API fake via `json-server`, dados persistidos localmente.
